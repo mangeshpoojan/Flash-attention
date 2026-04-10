@@ -17,7 +17,7 @@ Reproduce the core result of the [FlashAttention v1 paper (Dao et al., 2022)](ht
 
 Implements scaled dot-product attention:
 
-$$O = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{D}}\right)V$$
+$$O = \text{softmax}\left(\frac{QK^T}{\sqrt{D}}\right)V$$
 
 - Uses `torch.matmul` and `torch.softmax` with `dim=-1`
 - Forms the full N×N attention matrix explicitly (no tiling or block loops)
